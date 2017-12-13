@@ -1,0 +1,131 @@
+.wrapper {
+  max-width: 1340px;
+  box-sizing: border-box;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.header {
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+  }
+  &__address {
+    color: #444444;
+    font-size: 16px;
+  }
+  &__phone {
+    text-align: right;
+    color: #444444;
+    font-size: 16px;
+
+    &_link {
+      display: block;
+      color: #000000;
+      font-size: 28px;
+      font-weight: 500;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__menu {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    &--container {
+      border-top: 1px solid #aeaeae;
+      border-bottom: 1px solid #aeaeae;
+    }
+
+    &_item {
+      display: block;
+      position: relative;
+      height: 60px;
+      line-height: 50px;
+      padding: 0 17px;
+      box-sizing: border-box;
+      border-top: 5px solid transparent;
+      border-bottom: 5px solid transparent;
+      transition: all .2s;
+
+      &:hover {
+        border-top: 5px solid #b6a269;
+
+        & .header__submenu {
+          opacity: 1;
+          visibility: visible;
+          top: 53px;
+        }
+      }
+
+      & > a {
+        color: #444444;
+        font-weight: 300;
+      }
+    }
+  }
+
+  &__submenu {
+    width: 100%;
+    position: absolute;
+    left: 10px;
+    top: 90px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .2s;
+    padding-top: 22px;
+
+    &_block {
+      width: 260px;
+      padding: 5px 22px 2px;
+      box-sizing: border-box;
+      background-color: #b6a269;
+    }
+
+    &_item {
+      position: relative;
+      display: block;
+      color: #ffffff;
+      font-weight: 300;
+      line-height: 18px;
+      box-sizing: border-box;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, .5);
+      transition: all .2s;
+      
+      &:last-child {
+        border: none;
+      }
+
+      &:hover {
+        padding-left: 7px;
+      }
+    }
+
+    &::before {
+      position: absolute;
+      left: 35px;
+      left: calc(50% - 9px);
+      top: 13px;
+      content: '';
+      width: 18px;
+      height: 18px;
+      transform: rotate(45deg);
+      background-color: #b6a269;
+    }
+  }
+}
+
+.butter, .book-btn {
+  display: none;
+}
