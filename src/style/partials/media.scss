@@ -48,6 +48,129 @@
     &__phone {
       order: 2;
     }
+
+    &__menu {
+      display: block;
+      box-sizing: border-box;
+
+      &--container {
+        position: absolute;
+        top: 120px;
+        left: 0;
+        width: 100%;
+        box-sizing: border-box;
+        background: #b6a269;
+        max-height: 0;
+        transition: all .2s;
+        overflow-y: hidden;
+        border: none;
+
+        &::-webkit-scrollbar-button {
+          background-image:url('');
+          background-repeat:no-repeat;
+          width:5px;
+          height:0px
+        }
+        
+        &::-webkit-scrollbar-track {
+          background-color:#ecedee
+        }
+        
+        &::-webkit-scrollbar-thumb {
+          -webkit-border-radius: 0px;
+          border-radius: 0px;
+          background-color:#ccc;
+        }
+        
+        &::-webkit-scrollbar{
+          width: 1px;
+        }
+      }
+
+      &--open {
+        max-height: 300px;
+        max-height: calc(100vh - 120px);
+        overflow-y: auto;
+      }
+
+      &_item {
+        max-height: 45px;
+        height: auto;
+        border-top: none;
+        border-bottom: 1px solid #fff;
+        line-height: 44px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 0;
+
+        & > a {
+          color: #ffffff;
+          padding-left: 17px;
+          text-transform: none;
+        }
+
+        &:hover {
+          border-top: none;
+
+          & .header__submenu {
+            opacity: 0;
+            visibility: hidden;
+          }
+        }
+      }
+    }
+
+    &__submenu {
+      box-sizing: border-box;
+      left: 0;
+      top: 0;
+      position: static;
+      padding-top: 0;
+      z-index: 99;
+      max-height: 0;
+      overflow: hidden;
+
+      &--opened {
+        max-height: 300px;
+        opacity: 1 !important;
+        visibility: visible !important;
+      }
+
+      &--open {
+        max-height: 300px;
+
+        & .header__submenu_arrow {
+          transform: rotate(90deg);
+        }
+      }
+
+      &_arrow {
+        display: block;
+        height: 40px;
+        border-radius: 100%;
+        cursor: pointer;
+        outline: none;
+        width: 40px;
+        transition: all .2s;
+        background: url(../img/mobile-menu-arrow.png) no-repeat center;
+      }
+
+      &::before {
+        display: none;
+      }
+
+      &_item {
+        padding-left: 35px;
+      }
+
+      &_block {
+        width: 100%;
+        background: #9b8b60;
+        padding: 5px 0 2px;
+      }
+    }
   }
 
 }
