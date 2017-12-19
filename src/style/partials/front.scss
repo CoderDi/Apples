@@ -1,0 +1,274 @@
+/*front*/
+.title {
+  color: #000000;
+  font-family: "Museo Sans Cyrl";
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 300;
+  margin: 0 0 20px;
+  text-align: center;
+}
+.subtitle {
+  color: #444444;
+  font-family: "Museo Sans Cyrl";
+  font-size: 16px;
+  font-weight: 100;
+  display: block;
+  text-align: center;
+}
+.comfort {
+  max-width: 1170px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+  }
+
+  &__item {
+    width: 100%;
+    border: 1px solid #e5e5e5;
+    background-color: #ffffff;
+
+    &--over {
+      width: 33.333%;
+      padding: 0 9px;
+      box-sizing: border-box;
+    }
+
+    &:hover img {
+      transform: scale3d(1.05, 1.05, 1.05);
+    }
+    &:hover .comfort__text::before {
+      transform: rotate3d(0, 1, 0, 90deg);
+      opacity: 0;
+    }
+  }
+
+  &__img {
+    position: relative;
+    height: 270px;
+    overflow: hidden;
+
+    &::before {
+      position: absolute;
+      z-index: 2;
+      content: '';
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #000000;
+      opacity: 0.35;
+    }
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: 1.7s ease-in-out;
+    }
+  }
+
+  &__text {
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    left: 50%;
+    width: 273px;
+    height: 168px;
+    transform: translate3d(-50%, -50%, 10px);
+    perspective: 1300px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    
+    &::before {
+      position: absolute;
+      display: inline-block;
+      content: '';
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.75);
+      background-color: rgba(255, 255, 255, 0.26);
+      transition: 800ms opacity, 250ms transform, 250ms -webkit-transform;
+    }
+  }
+
+  &__count {
+    position: relative;
+    color: #ffffff;
+    font-family: "Museo Sans Cyrl";
+    font-size: 24px;
+    font-weight: 700;
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  &__line {
+    position: relative;
+    width: 61px;
+    height: 8px;
+    background-color: #ffffff;
+    margin: 20px 0 25px;
+  }
+  &__category {
+    position: relative;
+    display: block;
+    width: 100%;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 300;
+    text-align: center;
+  }
+  &__bottom {
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__title {
+    color: #100f0d;
+    font-size: 18px;
+    font-weight: 100;
+
+    & b {
+      display: block;
+      color: #000000;
+      font-weight: 500;
+    }
+  }
+  &__btn {
+    display: block;
+    width: 138px;
+    height: 44px;
+    border: 1px solid #000000;
+    background-color: transparent;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: all .3s;
+    color: #000000;
+    font-size: 14px;
+    font-weight: 100;
+    line-height: 42px;
+    text-align: center;
+
+    &:hover {
+      border: 1px solid #b6a269;
+      background-color: #b6a269;
+      color: #ffffff;
+    }
+  }
+}
+
+.finn {
+  padding-top: 45px;
+  background: url(../img/finn-bg.png) no-repeat center;
+  background-size: cover;
+
+  &__list {
+    padding-top: 15px;
+    padding-bottom: 45px;
+    max-width: 1170px;
+    margin: 0 auto;
+  }
+
+  &__item {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+
+    &::before {
+      position: absolute;
+      z-index: 2;
+      content: '';
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #000000;
+      opacity: 0.3;
+      transition: 1s ease-in-out;
+    }
+
+    &:hover img {
+      transform: scale3d(1.05, 1.05, 1.05);
+    }
+    &:hover::before {
+      opacity: .2;
+    }
+
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: 1s ease-in-out;
+    }
+
+    &--over {
+      width: 33.333%;
+      height: 374px;
+      box-sizing: border-box;
+      padding: 0 9px;
+    }
+
+    &_text {
+      position: absolute;
+      z-index: 3;
+      text-align: center;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #ffffff;
+      font-size: 24px;
+      font-weight: 300;
+      text-transform: uppercase;
+      cursor: default;
+    }
+
+    &_link {
+      position: absolute;
+      bottom: 45px;
+      right: 15px;
+      z-index: 4;
+      opacity: 0;
+      visibility: hidden;
+      width: 46px;
+      height: 46px;
+      border: 2px solid #fff;
+      border-radius: 100%;
+      background: url(../img/link.png) no-repeat center;
+      transition: .6s ease-in-out;
+    }
+    &:hover &_link {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

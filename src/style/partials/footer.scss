@@ -43,6 +43,10 @@
       font-weight: 300;
       text-transform: uppercase;
       padding: 0 17px;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 
@@ -95,6 +99,10 @@
   &__logo {
     margin-right: 25px;
     float: left;
+
+    &_flex {
+      display: flex;
+    }
   }
 
   &__text {
