@@ -1,4 +1,48 @@
 main.page.front-page
+  section.slider--over.wrapper
+    .slider
+      .slider__block#slider
+        a.slider__item(href="")
+          .slider__item_img
+            img(src="img/slide1.jpg", alt="")
+          .slider__item_content
+            h2.slider__item_title УЮТНЫЕ НОМЕРА ДЛЯ НОВОБРАЧНЫХ
+            span.slider__item_text Улучшенные номера с повышенной комфортностью.
+            span.slider__item_price Стоимость от 5.500 руб.
+        a.slider__item(href="")
+          .slider__item_img
+            img(src="img/slide1.jpg", alt="")
+          .slider__item_content
+            h2.slider__item_title УЮТНЫЕ НОМЕРА ДЛЯ НОВОБРАЧНЫХ
+            span.slider__item_text Улучшенные номера с повышенной комфортностью.
+            span.slider__item_price Стоимость от 5.500 руб.
+
+        a.slider__item(href="")
+          .slider__item_img
+            img(src="img/slide1.jpg", alt="")
+          .slider__item_content
+            h2.slider__item_title УЮТНЫЕ НОМЕРА ДЛЯ НОВОБРАЧНЫХ
+            span.slider__item_text Улучшенные номера с повышенной комфортностью.
+            span.slider__item_price Стоимость от 5.500 руб.
+
+    .bron
+      form.bron-form(action="")
+        span.bron__title Бронирование онлайн
+        span.bron__subtitle Получите гарантированное заселение оставив заявку прямо сейчас!
+        .bron__line
+        label.bron__label
+          span Ваше имя
+          input.bron__input(type="text", name="name", placeholder="Введите имя")
+        label.bron__label
+          span Ваш телефон*
+          input.bron__input(type="text", name="name", placeholder="Введите телефон")
+        input.bron__submit(type="submit", value="ПЕРЕЗВОНИТЕ МНЕ")
+        label.form__check
+          input(type="checkbox", name="", checked="true")
+          span.form__check_custom
+          span.form__check_text Я согласен на обработкой 
+            a(href="") персональных данных
+
   section.wrapper.comfort
     h2.title КОМФОРТНЫЕ НОМЕРА
     span.subtitle В каждом номере отеля «Яблоки» есть все необходимое, как для продуктивной работы, так и для отдыха.
@@ -70,3 +114,89 @@ main.page.front-page
             br
             | от 1.000 руб.
           a.finn__item_link(href="")
+
+  section.services
+    h2.title УСЛУГИ ГОСТИНИЦЫ
+    .services__list
+      .services__item
+        img(src="img/services1.jpg", alt="")
+        .services__text
+          span.services__title ФИНСКАЯ 
+            br
+            | САУНА
+          .services__line
+          span.services__desc 3 сауны повышенной комфортности.
+
+      .services__item
+        img(src="img/services2.jpg", alt="")
+        .services__text
+          span.services__title ХИМЧИСТКА 
+            br
+            | И ПРАЧЕЧНАЯ
+          .services__line
+          span.services__desc Каждый гость может воспользоваться данной услугой.
+
+      .services__item
+        img(src="img/services3.jpg", alt="")
+        .services__text
+          span.services__title ОХРАНЯЕМАЯ 
+            br
+            | ПАРКОВКА
+          .services__line
+          span.services__desc Круглосуточно охраняемая парковка на территории отеля.
+
+      .services__item
+        img(src="img/services4.jpg", alt="")
+        .services__text
+          span.services__title ЗАВТРАК В 
+            br
+            | НОМЕР
+          .services__line
+          span.services__desc Бесплатные завтраки в номер гостей.
+
+      .services__item
+        img(src="img/services5.jpg", alt="")
+        .services__text
+          span.services__title ВЫЗОВ
+            br
+            | ТАКСИ
+          .services__line
+          span.services__desc Бесплатный заказ машины к отелю.
+
+      .services__item
+        img(src="img/services6.jpg", alt="")
+        .services__text
+          span.services__title ROOM
+            br
+            | СЕРВИС
+          .services__line
+          span.services__desc Доставка фастфуда, ролл, напитков.
+
+  section.about
+    h2.title КОРОТКО О НАС
+    p.paragraph Гостиница «Царицыно» расположена в 150 метрах от станции метро «Орехово», в одном из самых живописных и экологически чистых районов столицы.
+      | По прямой ветке метро можно за считанные минуты добраться до центра города, «Павелецкого», «Речного» и «Белорусского» вокзалов. Поездка до 
+      | аэропорта «Домодедово» займет 20 минут. Нашим преимуществом является близкое расположение к международному аэропорту «Домодедово» и легкая 
+      | транспортная доступность к основным магистралям Москвы.
+    p.paragraph Туристам, приехавшим отдохнуть в Москву, также понравится проживание в гостинице «Царицыно» - из окон отеля открывается прекрасный вид на 
+      | Царицынский лесопарк – резиденцию русской Императрицы Екатерины II. За 15 минут Вы дойдете до озера, лодочной станции, теннисных кортов, а также 
+      | сможете совершить прогулки по лесу на лошадях, лыжах, велосипедах.
+    a.about__btn(href="") ЧИТАТЬ ПОДРОБНЕЕ
+
+  section.map#map
+
+  section.address
+    .address__plash
+      .address__content
+        span.address__text 603400, г.Нижний Новгород,
+          br
+          | р-н Ленинский, ул. Дружбы д. 19а 
+        span.address__text Тел.: 
+          a(href="tel:+7 (831) 2508-555") +7 (831) 2508-555;
+        span.address__text Режим работы: круглосуточно;
+        span.address__text E-Mail: 
+          a(href="mailto:info@yabloki19.ru") info@yabloki19.ru;
+        .address__socials
+          a.address__socials_item.address__socials_item--ig(href="")
+          a.address__socials_item.address__socials_item--vk(href="")
+          a.address__socials_item.address__socials_item--owl(href="")
