@@ -498,6 +498,17 @@
     position: relative;
     width: 100%;
 
+    &::before {
+      position: absolute;
+      content: '';
+      width: 13px;
+      height: 13px;
+      left: 30px;
+      top: 28px;
+      background: #fff;
+      transform: rotate(45deg);
+    }
+
     & span {
       color: #ffffff;
       font-size: 16px;

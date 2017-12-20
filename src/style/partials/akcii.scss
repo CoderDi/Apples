@@ -97,7 +97,69 @@
   }
 }
 
+.contacts {
 
+  & p {
+    color: #444444;
+    font-size: 16px;
+    font-weight: 300;
+  }
+
+  & h3 {
+    color: #000000;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 25px 0;
+  }
+
+  &__flex {
+    padding: 22px 0 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__item {
+
+    &_list {
+      display: block;
+      padding-left: 25px;
+      color: #444444;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 24px;
+      background: url(../img/li.png) no-repeat center left;
+    }
+
+    &_link {
+      display: block;
+      color: #000000;
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 26px;
+
+      & a {
+        color: #000000;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 26px;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    &--map {
+      padding-left: 76px;
+      background: url(../img/contacts-map.png) no-repeat center left;
+    }
+    &--address {
+      padding-left: 76px;
+      background: url(../img/address.png) no-repeat center left;
+    }
+  }
+}
 
 
 
