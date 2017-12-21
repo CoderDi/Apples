@@ -160,6 +160,38 @@
       width: 100%;
       transition: max-height .2s ease-in-out;
       overflow-y: auto;
+
+      &::-webkit-scrollbar-button {
+        background-image:url('');
+        background-repeat:no-repeat;
+        width:0px;
+        height:0px
+      }
+      
+      &::-webkit-scrollbar-track {
+        background-color:#f3f3f3;
+      }
+      
+      &::-webkit-scrollbar-thumb {
+        -webkit-border-radius: 0px;
+        border-radius: 0px;
+        background-color:#c7c7c7;
+      }
+      
+      &::-webkit-scrollbar-thumb:hover{
+        background-color:#c0c0c0;
+      }
+      
+      &::-webkit-resizer{
+        background-image:url('');
+        background-repeat:no-repeat;
+        width:0px;
+        height:0px
+      }
+      
+      &::-webkit-scrollbar{
+        width: 36px;
+      }
     }
     &_item {
       height: 36px;
@@ -194,7 +226,40 @@
     }
 
     &_flex {
-      
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &_right {
+      width: 50%;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+    &_item {
+      width: 220px;
+      padding: 15px 15px 15px 85px;
+      box-sizing: border-box;
+      background: rgba(229, 229, 229, .5);
+      background-position: 13px 15px;
+      background-repeat: no-repeat;
+      margin-bottom: 20px;
+      color: #444444;
+      font-size: 16px;
+      font-weight: 300;
+
+      &--price {
+        background-image: url(../img/price.png);
+      }
+      &--mgnov {
+        background-image: url(../img/mgnov.png);
+      }
+      &--overday {
+        background-image: url(../img/overday.png);
+      }
+      &--overall {
+        background-image: url(../img/overall.png);
+      }
     }
 
   }

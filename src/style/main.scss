@@ -11,10 +11,6 @@ a {
   text-decoration: none;
 }
 
-body {
-  height: 1000px;
-}
-
 @import "partials/header";
 
 @import "partials/front";
@@ -26,6 +22,8 @@ body {
 @import "partials/akcii";
 
 @import "partials/booking";
+
+@import "partials/rooms";
 
 @import "partials/footer";
 

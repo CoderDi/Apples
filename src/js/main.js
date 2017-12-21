@@ -1,5 +1,11 @@
 $(document).ready(function() {
 
+  $(".rooms__slider").slick();
+  $(".rooms__slider_nav").slick({
+    slidesToShow: 4,
+    focusOnSelect: true
+  });
+
   var now = new Date();
   var month = Array("Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь");
   $("#dateInDay").text(now.getDate());
