@@ -7,6 +7,228 @@ section.breadcrumbs.breadcrumbs--gallery
         a.breadcrumbs__link(href="") Бронирование
     a.breadcrumbs__btn(href="") БРОНИРОВАНИЕ
 
-section.gallery.hotel.akcii
+section.gallery.hotel.booking
   .gallery__wrapper.hotel__wrapper
-    h2.gallery__title Спецпредложения
+    h2.gallery__title Форма бронирования
+    .contacts__flex.contacts__flex--booking
+      .contacts__item.contacts__item--map
+        span.contacts__item_link Тел.: 
+          a(href="tel:+7 (831) 2508-555") +7 (831) 2508-555
+        span.contacts__item_link E-mail: 
+          a(href="mailto:info@yabliki19.ru") info@yabliki19.ru
+      .contacts__item.contacts__item--address
+        span.contacts__item_link г. Нижний Новгород, 
+          br
+          | р-н. Ленинский, ул. Дружбы, д. 19а
+      .contacts__item
+        a.btn-find(href="") НАЙТИ НА КАРТЕ
+
+    .gallery__block_bottom
+        i
+        i.big
+        i
+
+    .booking__block
+      form.booking__form(action="")
+        .booking__form_flex
+          .booking__form_block
+            label.bron__label.booking__label
+              span Ваше имя
+              input.bron__input(type="text", name="name", placeholder="Введите имя")
+            label.bron__label.booking__label
+              span Ваш телефон*
+              input.bron__input(type="text", name="phone", placeholder="Введите телефон")
+
+          .booking__form_block
+            label.bron__label.booking__label
+              span Бронируемый номер*
+              input.bron__input(type="text", name="room", readonly, placeholder="Выберите номер")
+              .booking__select.booking__select--z
+                .booking__select_arrow
+                  i
+                .booking__select_down
+                  .booking__select_item.select_item-e Эксклюзивный №1
+                  .booking__select_item.select_item-e Эксклюзивный №2
+                  .booking__select_item.select_item-e Эксклюзивный №3
+            label.bron__label.booking__label
+              span Количество человек*
+              input.bron__input(type="text", name="count", readonly, placeholder="Выберите количество")
+              .booking__select
+                .booking__select_arrow
+                  i
+                .booking__select_down
+                  .booking__select_item.select_item-e 1 человек
+                  .booking__select_item.select_item-e 2 человека
+                  .booking__select_item.select_item-e 3 человека
+                  .booking__select_item.select_item-e Более 3 человек
+
+          .booking__form_block.booking__form_block--date
+            .bron__label.booking__label.booking__label--date
+              span Дата заезда*
+              input.bron__input#dateIn(type="hidden", name="dayIn", readonly)
+              .booking__date
+                .booking__select.booking__select--day.booking__select--z
+                  .booking__select_arrow
+                    .booking__select_text#dateInDay 
+                    i
+                  .booking__select_down
+                    .booking__select_item.select_item-d 1
+                    .booking__select_item.select_item-d 2
+                    .booking__select_item.select_item-d 3
+                    .booking__select_item.select_item-d 4
+                    .booking__select_item.select_item-d 5
+                    .booking__select_item.select_item-d 6
+                    .booking__select_item.select_item-d 7
+                    .booking__select_item.select_item-d 8
+                    .booking__select_item.select_item-d 9
+                    .booking__select_item.select_item-d 10
+                    .booking__select_item.select_item-d 11
+                    .booking__select_item.select_item-d 12
+                    .booking__select_item.select_item-d 13
+                    .booking__select_item.select_item-d 14
+                    .booking__select_item.select_item-d 15
+                    .booking__select_item.select_item-d 16
+                    .booking__select_item.select_item-d 17
+                    .booking__select_item.select_item-d 18
+                    .booking__select_item.select_item-d 19
+                    .booking__select_item.select_item-d 20
+                    .booking__select_item.select_item-d 21
+                    .booking__select_item.select_item-d 22
+                    .booking__select_item.select_item-d 23
+                    .booking__select_item.select_item-d 24
+                    .booking__select_item.select_item-d 25
+                    .booking__select_item.select_item-d 26
+                    .booking__select_item.select_item-d 27
+                    .booking__select_item.select_item-d 28
+                    .booking__select_item.select_item-d 29
+                    .booking__select_item.select_item-d 30
+                    .booking__select_item.select_item-d 31
+
+                .booking__select.booking__select--month.booking__select--z
+                  .booking__select_arrow
+                    .booking__select_text#dateInMonth 
+                    i
+                  .booking__select_down
+                    .booking__select_item.select_item-do Январь
+                    .booking__select_item.select_item-do Февраль
+                    .booking__select_item.select_item-do Март
+                    .booking__select_item.select_item-do Апрель
+                    .booking__select_item.select_item-do Май
+                    .booking__select_item.select_item-do Июнь
+                    .booking__select_item.select_item-do Июль
+                    .booking__select_item.select_item-do Август
+                    .booking__select_item.select_item-do Сентябрь
+                    .booking__select_item.select_item-do Октябрь
+                    .booking__select_item.select_item-do Ноябрь
+                    .booking__select_item.select_item-do Декабрь
+
+                .booking__select.booking__select--year.booking__select--z
+                  .booking__select_arrow
+                    .booking__select_text#dateInYear 
+                    i
+                  .booking__select_down
+                    .booking__select_item.select_item-d 2017
+                    .booking__select_item.select_item-d 2018
+                    .booking__select_item.select_item-d 2019
+
+            .bron__label.booking__label.booking__label--date
+              span Дата выезда
+              input.bron__input#dateOut(type="hidden", name="dayOut", readonly)
+              .booking__date
+                .booking__select.booking__select--day
+                  .booking__select_arrow
+                    .booking__select_text#dateOutDay 
+                    i
+                  .booking__select_down
+                    .booking__select_item.select_item-d 1
+                    .booking__select_item.select_item-d 2
+                    .booking__select_item.select_item-d 3
+                    .booking__select_item.select_item-d 4
+                    .booking__select_item.select_item-d 5
+                    .booking__select_item.select_item-d 6
+                    .booking__select_item.select_item-d 7
+                    .booking__select_item.select_item-d 8
+                    .booking__select_item.select_item-d 9
+                    .booking__select_item.select_item-d 10
+                    .booking__select_item.select_item-d 11
+                    .booking__select_item.select_item-d 12
+                    .booking__select_item.select_item-d 13
+                    .booking__select_item.select_item-d 14
+                    .booking__select_item.select_item-d 15
+                    .booking__select_item.select_item-d 16
+                    .booking__select_item.select_item-d 17
+                    .booking__select_item.select_item-d 18
+                    .booking__select_item.select_item-d 19
+                    .booking__select_item.select_item-d 20
+                    .booking__select_item.select_item-d 21
+                    .booking__select_item.select_item-d 22
+                    .booking__select_item.select_item-d 23
+                    .booking__select_item.select_item-d 24
+                    .booking__select_item.select_item-d 25
+                    .booking__select_item.select_item-d 26
+                    .booking__select_item.select_item-d 27
+                    .booking__select_item.select_item-d 28
+                    .booking__select_item.select_item-d 29
+                    .booking__select_item.select_item-d 30
+                    .booking__select_item.select_item-d 31
+
+                .booking__select.booking__select--month
+                  .booking__select_arrow
+                    .booking__select_text#dateOutMonth 
+                    i
+                  .booking__select_down
+                    .booking__select_item.select_item-do Январь
+                    .booking__select_item.select_item-do Февраль
+                    .booking__select_item.select_item-do Март
+                    .booking__select_item.select_item-do Апрель
+                    .booking__select_item.select_item-do Май
+                    .booking__select_item.select_item-do Июнь
+                    .booking__select_item.select_item-do Июль
+                    .booking__select_item.select_item-do Август
+                    .booking__select_item.select_item-do Сентябрь
+                    .booking__select_item.select_item-do Октябрь
+                    .booking__select_item.select_item-do Ноябрь
+                    .booking__select_item.select_item-do Декабрь
+
+                .booking__select.booking__select--year
+                  .booking__select_arrow
+                    .booking__select_text#dateOutYear 
+                    i
+                  .booking__select_down
+                    .booking__select_item.select_item-do 2017
+                    .booking__select_item.select_item-do 2018
+                    .booking__select_item.select_item-do 2019
+        
+        label.form__check.booking__form--check
+          input(type="checkbox", name="", checked="true")
+          span.form__check_custom
+          span.form__check_text Я согласен на обработкой 
+            a(href="") персональных данных
+
+        input.booking__form_submit(type="submit", value="ЗАБРОНИРОВАТЬ НОМЕР")
+            
+
+    .gallery__block_bottom
+        i
+        i.big
+        i
+
+    .booking__bottom
+      h3.booking__bottom_title Бронируйте с выгодой для себя!
+      .booking__bottom_flex
+        .contacts__item.booking__bottom_left
+          span.contacts__item_list Скидки на при бронировании более чем на сутки;
+          span.contacts__item_list Скидка 15% на услуги cауны;
+          span.contacts__item_list Шампанское и фрукты в подарок для молодожен;
+          span.contacts__item_list Ранний заезд с 11:00 при наличии свободных номеров;
+          span.contacts__item_list Гарантированный поздний выезд до 15:00;
+          span.contacts__item_list Завтрак в номер в любое утреннее время;
+          span.contacts__item_list Парковочное место на 1 авто на территории отеля;
+        .booking__bottom_right
+          span.booking__bottom_item.booking__bottom_item--price Гарантируем лучшую цену
+          span.booking__bottom_item.booking__bottom_item--mgnov Мнгновенное подтверждение брони
+          span.booking__bottom_item.booking__bottom_item--overday Круглосуточная поддержка клиентов
+          span.booking__bottom_item.booking__bottom_item--overall Всегда дейтствующие скидки
+          
+
+          

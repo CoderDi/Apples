@@ -1,5 +1,37 @@
 $(document).ready(function() {
 
+  var now = new Date();
+  var month = Array("Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь");
+  $("#dateInDay").text(now.getDate());
+  $("#dateInYear").text(now.getFullYear());
+  $("#dateInMonth").text(month[now.getMonth()]);
+
+  $(".booking__select_arrow").click(function(){
+    $(this).parents(".booking__select").toggleClass("booking__select--open");
+  });
+
+  $(".select_item-e").click(function(){
+    $(this).parents(".booking__label").find("input").val($(this).text());
+    $(this).parents(".booking__select").removeClass("booking__select--open");
+  });
+
+  $(".select_item-d").click(function(){
+    $(this).parents(".booking__select").find(".booking__select_text").text($(this).text());
+    $(this).parents(".booking__select").removeClass("booking__select--open");
+    $("#dateIn").val($("#dateInDay").text() + " " + $("#dateInMonth").text() + " " + $("#dateInYear").text());
+  });
+
+  $(".select_item-do").click(function(){
+    $(this).parents(".booking__select").find(".booking__select_text").text($(this).text());
+    $(this).parents(".booking__select").removeClass("booking__select--open");
+    $("#dateOut").val($("#dateOutDay").text() + " " + $("#dateOutMonth").text() + " " + $("#dateOutYear").text());
+  });
+
+
+
+
+
+
   $(function() { 
     $(window).scroll(function() {     
       if($(this).scrollTop() >300) {     
