@@ -1,8 +1,30 @@
 $(document).ready(function() {
 
+  $(".open3d").click(function(){
+    $("#iframe").attr("src", $(this).attr("data-src"));
+    $(".popup").addClass("popup--show");
+    setTimeout(function() { 
+      $("#iframe").show();
+    }, 300);
+  });
+  $(".popup__close").click(function(){
+    $(".popup").removeClass("popup--show");
+    $("#iframe").hide();
+  });
+  $(".popup-bg").click(function(){
+    $(".popup").removeClass("popup--show");
+    $("#iframe").hide();
+  });
+  
+
   $(".rooms__slider").slick({
     infinite: false,
     dots: true
+  });
+  $('.rooms__slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+    var that = $(this);
+    that.find('.rooms__slider_item--title').removeClass('animated slideInRight');
+    setTimeout(function() { that.find('.rooms__slider_item--title').addClass('animated slideInRight'); }, 100);
   });
   $(".rooms__slider_nav").slick({
     slidesToShow: 4,
@@ -68,10 +90,25 @@ $(document).ready(function() {
 
   $("#slider").slick({
     dots: true,
-    arrows: false
+    arrows: false,
+    infinite: false
+  });
+
+  $('#slider').on('beforeChange', function(slick, currentSlide){
+    var that = $(this);
+    that.find('.slick-current .slider__item_title').removeClass('animated slideInDown');
+    setTimeout(function() { that.find('.slick-current .slider__item_title').addClass('animated slideInDown'); }, 100);
+    that.find('.slick-current .slider__item_text').removeClass('animated slideInLeft');
+    setTimeout(function() { that.find('.slick-current .slider__item_text').addClass('animated slideInLeft'); }, 100);
+    that.find('.slick-current .slider__item_price').removeClass('animated slideInUp');
+    setTimeout(function() { that.find('.slick-current .slider__item_price').addClass('animated slideInUp'); }, 100);
+    
   });
   
-  new WOW().init();
+  new WOW().init({
+    offset: 50,
+    mobile: false
+  });
 
   if ($("#map").length > 0) {
     ymaps.ready(function () {
@@ -152,3 +189,14 @@ $(document).ready(function() {
 });
 
 
+var tempScrollTop, currentScrollTop = 0;
+$(window).scroll(function(){
+  currentScrollTop = $(window).scrollTop();
+  if (tempScrollTop < currentScrollTop ) {
+    $(".stick").addClass("stick--active");
+  }
+  else if (tempScrollTop > currentScrollTop ) {
+    $(".stick").removeClass("stick--active");
+  }
+  tempScrollTop = currentScrollTop;
+});

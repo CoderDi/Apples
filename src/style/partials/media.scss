@@ -257,6 +257,7 @@
   .footer {
     &__wrapper {
       justify-content: center;
+      padding-bottom: 65px;
     }
     &__logo {
       margin-right: 0;
@@ -295,6 +296,27 @@
         width: 100%;
         margin-bottom: 15px;
       }
+    }
+  }
+
+  .stick {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .to-top {
+    width: 40px;
+    height: 40px;
+    padding-top: 20px;
+    bottom: 80px;
+    &:hover {
+      padding-top: 25px;
+    }
+
+    &::before {
+      left: 8px;
+      width: 19px;
+      height: 19px;
     }
   }
 }

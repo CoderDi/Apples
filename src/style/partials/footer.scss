@@ -165,10 +165,126 @@
   }
 }
 
+.stick {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: -56px;
+  background-color: #9f8e5f;
+  display: flex;
+  opacity: 0;
+  visibility: hidden;
+  transition: .5s ease-in-out;
+
+  &--active {
+    bottom: 0;
+  }
+
+  &__item {
+    width: 25%;
+    height: 54px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    background: transparent;
+    transition: .2s ease-in-out;
+
+    &:hover {
+      background: #c9b376;
+    }
+
+    & i {
+      display: block;
+      width: 22px;
+      height: 22px;
+      background: url(../img/mobile-menu.png) no-repeat center;
+    }
+
+    &--main i {
+      background-position: 0 0;
+    }
+    &--rooms i {
+      background-position: -86px 0;
+    }
+    &--sauna i {
+      background-position: -170px 0;
+    }
+    &--booking i {
+      background-position: -253px 0;
+    }
+    & span {
+      display: block;
+      width: 100%;
+      text-align: center;
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 100;
+    }
+  }
+}
 
 
 
+.popup {
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: .2s ease-in-out;
 
+  &--show {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.6);
+  }
+  &__iframe {
+    position: relative;
+    width: 700px;
+    height: 400px;
+    background: #fff;
+  }
+
+  &__close {
+    position: absolute;
+    top: -14px;
+    right: -14px;
+    width: 28px;
+    height: 28px;
+    border-radius: 100%;
+    box-sizing: border-box;
+    border: 2px solid #fff;
+    background: #000;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 14px;
+    text-align: center;
+    line-height: 25px;
+    font-weight: 700;
+    cursor: pointer;
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.9);
+    transition: .2s ease-in-out;
+
+    &:hover {
+      background: #fff;
+      color: #000000;
+    }
+  }
+}
 
 
 

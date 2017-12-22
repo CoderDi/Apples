@@ -19,6 +19,11 @@
     background-size: cover;
   }
 
+  &--sauna {
+    background: url(../img/sauna.jpg) no-repeat center;
+    background-size: cover;
+  }
+
   &__wrapper {
     max-width: 1160px;
     margin: 0 auto;
