@@ -104,11 +104,32 @@ $(document).ready(function() {
     setTimeout(function() { that.find('.slick-current .slider__item_price').addClass('animated slideInUp'); }, 100);
     
   });
+
+  $(".rooms__card--more-link").click(function(){
+    $(this).parents(".rooms__card").find(".rooms__card--more").toggleClass("rooms__card--more--open");
+  });
   
   new WOW().init({
     offset: 50,
     mobile: false
   });
+
+  $(function() {
+    $("[type=tel]").mask("+7 (999) 999-99-99");
+	});
+  
+  $('form input[type="checkbox"]').change(function () {
+
+    if ($(this).is(":checked"))
+    {
+        $(this).parents("form").find("input[type='submit']").attr("disabled", false);
+    }
+    else
+    {
+        $(this).parents("form").find("input[type='submit']").attr("disabled", true);
+    }
+});
+  
 
   if ($("#map").length > 0) {
     ymaps.ready(function () {

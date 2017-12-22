@@ -6,24 +6,24 @@ main.page.front-page
           .slider__item_img
             img(src="img/slide1.jpg", alt="")
           .slider__item_content
-            h2.slider__item_title УЮТНЫЕ НОМЕРА ДЛЯ НОВОБРАЧНЫХ
-            span.slider__item_text Улучшенные номера с повышенной комфортностью.
-            span.slider__item_price Стоимость от 5.500 руб.
+            h2.slider__item_title.animated.slideInDown УЮТНЫЕ НОМЕРА ДЛЯ НОВОБРАЧНЫХ
+            span.slider__item_text.animated.slideInLeft Улучшенные номера с повышенной комфортностью.
+            span.slider__item_price.animated.slideInUp Стоимость от 5.500 руб.
         a.slider__item(href="")
           .slider__item_img
-            img(src="img/slide1.jpg", alt="")
+            img(src="img/slide2.jpg", alt="")
           .slider__item_content
-            h2.slider__item_title УЮТНЫЕ НОМЕРА ДЛЯ НОВОБРАЧНЫХ
-            span.slider__item_text Улучшенные номера с повышенной комфортностью.
-            span.slider__item_price Стоимость от 5.500 руб.
+            h2.slider__item_title ОТДЫХ В ФИНСКОЙ САУНЕ
+            span.slider__item_text Окунитесь в хорошую атмосферу и освежающий бассейн.
+            span.slider__item_price Стоимость от 1.000 руб.
 
         a.slider__item(href="")
           .slider__item_img
             img(src="img/slide1.jpg", alt="")
           .slider__item_content
-            h2.slider__item_title УЮТНЫЕ НОМЕРА ДЛЯ НОВОБРАЧНЫХ
-            span.slider__item_text Улучшенные номера с повышенной комфортностью.
-            span.slider__item_price Стоимость от 5.500 руб.
+            h2.slider__item_title ВСТРЕЧАЕМ ГОСТЕЙ КАК СВОИХ ДЕТЕЙ
+            span.slider__item_text Так же бережно, нежно, аккуратно и терпеливо.
+            span.slider__item_price Номера от 5.500 руб.
 
     .bron
       form.bron-form(action="")
@@ -35,7 +35,7 @@ main.page.front-page
           input.bron__input(type="text", name="name", placeholder="Введите имя")
         label.bron__label
           span Ваш телефон*
-          input.bron__input(type="text", name="name", placeholder="Введите телефон")
+          input.bron__input(type="tel", name="phone", placeholder="Введите телефон" required)
         input.bron__submit(type="submit", value="ПЕРЕЗВОНИТЕ МНЕ")
         label.form__check
           input(type="checkbox", name="", checked="true")
@@ -183,9 +183,10 @@ main.page.front-page
       | сможете совершить прогулки по лесу на лошадях, лыжах, велосипедах.
     a.about__btn(href="") ЧИТАТЬ ПОДРОБНЕЕ
 
+  h2.title.contacts-title КОНТАКТЫ
   section.map#map
 
-  section.address.wow.slideInRight
+  section.address
     .address__plash
       .address__content
         span.address__text 603400, г.Нижний Новгород,
