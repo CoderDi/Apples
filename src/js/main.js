@@ -1,8 +1,14 @@
 $(document).ready(function() {
 
-  $(".rooms__slider").slick();
+  $(".rooms__slider").slick({
+    infinite: false,
+    dots: true
+  });
   $(".rooms__slider_nav").slick({
     slidesToShow: 4,
+    slidesToScroll: 1,
+    infinite: false,
+    arrows: false,
     focusOnSelect: true
   });
 
